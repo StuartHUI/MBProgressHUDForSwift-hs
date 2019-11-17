@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
   spec.name         = "MBProgressHUDForSwift_hs"
   spec.version      = "0.0.1"
   spec.summary      = "A clean and lightweight progress HUD for your iOS and tvOS app."
-  spec.swift_versions      = "4.0"
+  spec.swift_versions      = "4.2"
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
@@ -91,7 +91,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "MBProgressHUDForSwift/*"
+  spec.source_files  = "MBProgressHUDForSwift/*.{swift}"
   # spec.exclude_files = "MBProgressHUDForSwift/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
