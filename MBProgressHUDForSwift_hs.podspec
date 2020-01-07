@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MBProgressHUDForSwift_hs"
-  spec.version      = "0.0.1"
+  spec.version      = "1.0.3"
   spec.summary      = "A clean and lightweight progress HUD for your iOS and tvOS app."
   spec.swift_versions      = "4.2"
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/StuartHUI/MBProgressHUDForSwift-hs.git", :tag => "1.0.3" }
+  spec.source       = { :git => "https://github.com/StuartHUI/MBProgressHUDForSwift-hs.git", :tag => spec.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
