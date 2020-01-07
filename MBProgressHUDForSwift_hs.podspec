@@ -25,7 +25,8 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-                一个swift版本的MBProgressHUD
+  
+                一个swift版本的MBProgressHUD,来自https://www.jianshu.com/p/1134764a96b4  稍作了一些修改 啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
                    DESC
 
   spec.homepage     = "https://github.com/StuartHUI/MBProgressHUDForSwift-hs"
