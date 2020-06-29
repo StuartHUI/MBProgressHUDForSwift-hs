@@ -14,36 +14,11 @@ extension MBProgressHUD{
     
     /// 自动消失提示
     ///
-    /// - Parameter text: 要显示的文字
-    class func showText(_ text:String) {
-        MBProgressHUD.showText(text, toView: nil)
-    }
-    
-    /// 自动消失提示
-    ///
-    /// - Parameters:
-    ///   - text: 要显示的文字
-    ///   - toView: 要添加的View
-    class func showText(_ text:String, toView:UIView? ){
-        MBProgressHUD.showText(text, toView: toView, afterDelay: 1)
-    }
-    
-    /// 自动消失提示
-    ///
-    /// - Parameters:
-    ///   - text: 要显示的文字
-    ///   - afterDelay: 停留时间
-    class func showText(_ text:String, afterDelay:TimeInterval){
-        MBProgressHUD.showText(text, toView: nil, afterDelay: 1)
-    }
-    
-    /// 自动消失提示
-    ///
     /// - Parameters:
     ///   - text: 要显示的文字
     ///   - toView: 要添加的View
     ///   - afterDelay: 停留时间
-    class func showText(_ text:String, toView:UIView?, afterDelay:TimeInterval){
+    class func showText(_ text:String, toView:UIView? = nil, afterDelay:TimeInterval = 1){
         if text == "" {
             return
         }
@@ -69,7 +44,7 @@ extension MBProgressHUD{
     /// 不自动消失 文字+菊花提示
     ///
     /// - Parameter message: 文字
-    class func showWait(_ message:String?){
+    class func showWait(_ message:String? = nil){
         let view = UIApplication.shared.windows.last
         let hud: MBProgressHUD = MBProgressHUD.showHUDAddedTo(view!, animated: true)
         hud.labelText = message
@@ -77,11 +52,7 @@ extension MBProgressHUD{
         hud.show(true)
 //        return hud
     }
-//    class func showWait()->MBProgressHUD{
-    class func showWait(){
-//        return MBProgressHUD.showWait(nil)
-        MBProgressHUD.showWait(nil)
-    }
+
     class func hideHUDForView(_ forView:UIView?){
         var view = forView
         if view == nil {
@@ -99,19 +70,9 @@ extension MBProgressHUD{
     /// - Parameters:
     ///   - text: text
     ///   - toView: toView
-    /// - Returns: hud对象 可设置progress 控制消失
-    class func showProgressText(_ text:String, toView:UIView?)->MBProgressHUD {
-        return MBProgressHUD.showProgressText(text, toView: toView, model: .determinate)
-    }
-    
-    /// 文字+进度提示
-    ///
-    /// - Parameters:
-    ///   - text: text
-    ///   - toView: toView
     ///   - model: 进度条样式（determinate、determinateHorizontalBar、annularDeterminate ）
     /// - Returns: hud对象 可设置progress 控制消失
-    class func showProgressText(_ text:String, toView:UIView?, model:MBProgressHUDMode)->MBProgressHUD {
+    class func showProgressText(_ text:String, toView:UIView?, model:MBProgressHUDMode = .determinate)->MBProgressHUD {
         var view = toView
         if view == nil {
             view = UIApplication.shared.windows.last
