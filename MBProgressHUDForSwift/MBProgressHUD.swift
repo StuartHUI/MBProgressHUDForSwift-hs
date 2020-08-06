@@ -183,7 +183,6 @@ class MBProgressHUD: UIView {
     
     convenience init(view: UIView?) {
         assert(view != nil, "View must not be nil.")
-        
         self.init(frame: view!.bounds)
     }
 
@@ -658,7 +657,6 @@ extension MBProgressHUD {
                 return subview as? MBProgressHUD
             }
         }
-        
         return nil
     }
     
@@ -669,7 +667,6 @@ extension MBProgressHUD {
                 huds.append(aView as! MBProgressHUD)
             }
         }
-        
         return huds
     }
 }

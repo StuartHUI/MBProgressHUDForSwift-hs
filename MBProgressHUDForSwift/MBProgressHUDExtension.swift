@@ -6,11 +6,9 @@
 //  Copyright © 2019 Shuai Hui. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 
-extension MBProgressHUD{
+extension MBProgressHUD {
     
     /// 自动消失提示
     ///
@@ -18,7 +16,7 @@ extension MBProgressHUD{
     ///   - text: 要显示的文字
     ///   - toView: 要添加的View
     ///   - afterDelay: 停留时间
-    class func showText(_ text:String, toView:UIView? = nil, afterDelay:TimeInterval = 1){
+    class func showText(_ text: String, toView: UIView? = nil, afterDelay: TimeInterval = 1) {
         if text == "" {
             return
         }
@@ -44,7 +42,7 @@ extension MBProgressHUD{
     /// 不自动消失 文字+菊花提示
     ///
     /// - Parameter message: 文字
-    class func showWait(_ message:String? = nil){
+    class func showWait(_ message:String? = nil) {
         let view = UIApplication.shared.windows.last
         let hud: MBProgressHUD = MBProgressHUD.showHUDAddedTo(view!, animated: true)
         hud.labelText = message
@@ -53,7 +51,7 @@ extension MBProgressHUD{
 //        return hud
     }
 
-    class func hideHUDForView(_ forView:UIView?){
+    class func hideHUDForView(_ forView:UIView?) {
         var view = forView
         if view == nil {
             view = UIApplication.shared.windows.last
@@ -61,7 +59,7 @@ extension MBProgressHUD{
 //        _ = self.hideHUDForView(view!, animated: true)
         _ = self.hideHUDForView(view!, animated: true)
     }
-    class func hideHUD(){
+    class func hideHUD() {
         MBProgressHUD.hideHUDForView(nil)
     }
     
@@ -72,7 +70,7 @@ extension MBProgressHUD{
     ///   - toView: toView
     ///   - model: 进度条样式（determinate、determinateHorizontalBar、annularDeterminate ）
     /// - Returns: hud对象 可设置progress 控制消失
-    class func showProgressText(_ text:String, toView:UIView?, model:MBProgressHUDMode = .determinate)->MBProgressHUD {
+    class func showProgressText(_ text: String, toView: UIView?, model: MBProgressHUDMode = .determinate) -> MBProgressHUD {
         var view = toView
         if view == nil {
             view = UIApplication.shared.windows.last
@@ -95,7 +93,7 @@ extension MBProgressHUD{
     ///
     /// - Parameters:
     ///   - custom: 自定义view 在文字之上
-    class func showCustomProgressText(_ text:String, toView:UIView?, custom:UIView)->MBProgressHUD {
+    class func showCustomProgressText(_ text: String, toView: UIView?, custom: UIView) -> MBProgressHUD {
         var view = toView
         if view == nil {
             view = UIApplication.shared.windows.last
@@ -110,7 +108,6 @@ extension MBProgressHUD{
         hud!.labelText = text
         //        hud.margin = 10.0 //默认20  改为10会变窄
         hud!.removeFromSuperViewOnHide = true
-        
         hud!.show(true)
         return hud!
     }
